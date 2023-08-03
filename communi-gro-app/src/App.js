@@ -30,7 +30,7 @@ function App() {
           <Route index element = {<Home />}/>
           <Route path="plantlist" element={<PlantList plants={plants}/>}/>
           <Route path="comments" element={<CommentSection />}/>
-          <Route path="buyplant" element={<BuyPlant />}/>
+          <Route path="buyplant" element={<BuyPlant plants={plants} />}/>
         </Routes>
         </BrowserRouter>
     </>
