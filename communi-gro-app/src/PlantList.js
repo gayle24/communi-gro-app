@@ -33,11 +33,11 @@ function PlantList({plants}) {
                 <h4>{plant.common_name}</h4>
                 <img src={plant.plantImage} alt={plant.common_name}/>
                 <p>Scientific name: {plant.scientific_name}</p>
-                <p>Other name: {plant.other_name[0]} | {plant.other_name[1]}
+                <p>Other name: {plant.other_name} 
                 </p>
                 <p>Cycle: {plant.cycle}</p>
                 <p>Watering: {plant.watering}</p>
-                <p>Sunlight: {plant.sunlight[0]} | {plant.sunlight[1]} | {plant.sunlight[2]}</p>
+                <p>Sunlight: {plant.sunlight} </p>
                 <button onClick={handleClick}>Order Seedlings</button>
             </div>
         ))}

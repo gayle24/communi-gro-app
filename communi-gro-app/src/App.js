@@ -2,11 +2,11 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import Header from './Header';
 import PlantList from './PlantList';
-import {Route, Routes, BrowserRouter} from 'react-router-dom';
+import {Route, Routes, BrowserRouter, NavLink} from 'react-router-dom';
 import Home from './Home';
-import NavBar from './NavBar';
 import CommentSection from './CommentSection';
 import BuyPlant from './BuyPlant';
+import NavBar from './NavBar';
 
 function App() {
   const [plants, setPlants] = useState([{}]);
@@ -25,9 +25,12 @@ function App() {
     <>
       <Header />
       <BrowserRouter>
+      <NavLink to="/" style={{ marginRight: 10 }}>Home</NavLink>
+        <NavLink to="/plantlist" style={{ marginRight: 10 }}>Discover Plants</NavLink>
+        <NavLink to="/comments" style={{ marginRight: 10 }}>Talk to Us</NavLink>
         <Routes>
-          <Route path="/" element={<NavBar />}/>
           <Route index element = {<Home />}/>
+          <Route path="/" element={<NavBar/>}/>
           <Route path="plantlist" element={<PlantList plants={plants}/>}/>
           <Route path="comments" element={<CommentSection />}/>
           <Route path="buyplant" element={<BuyPlant plants={plants} />}/>
