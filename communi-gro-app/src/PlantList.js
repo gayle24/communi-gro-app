@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function PlantList({plants}) {
     // const[plantimage, setPlantImage] = useState("")
     // console.log(plants)
     
-   
+    const navigate = useNavigate();
     const disp = plants.map(plant=>{
 
         // console.log(Object.keys(plant) );
@@ -21,6 +22,10 @@ function PlantList({plants}) {
         
     })
 
+    function handleClick(){
+        navigate("/buyplant");
+    }
+
   return (
     <div className='mainlist'>
         {plants.map(plant=>(
@@ -33,10 +38,9 @@ function PlantList({plants}) {
                 <p>Cycle: {plant.cycle}</p>
                 <p>Watering: {plant.watering}</p>
                 <p>Sunlight: {plant.sunlight[0]} | {plant.sunlight[1]} | {plant.sunlight[2]}</p>
-                <button>Order Seedlings</button>
+                <button onClick={handleClick}>Order Seedlings</button>
             </div>
         ))}
-        <p>Plant list</p>
     </div>
   )
 }

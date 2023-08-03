@@ -6,6 +6,7 @@ import {Route, Routes, BrowserRouter} from 'react-router-dom';
 import Home from './Home';
 import NavBar from './NavBar';
 import CommentSection from './CommentSection';
+import BuyPlant from './BuyPlant';
 
 function App() {
   const [plants, setPlants] = useState([{}]);
@@ -16,7 +17,7 @@ function App() {
     .then((data)=>{
       // console.log(data);
       setPlants(data.data);
-      console.log(data.data.default_image);
+      console.log(data.data);
     });
   }, []); 
 
@@ -29,6 +30,7 @@ function App() {
           <Route index element = {<Home />}/>
           <Route path="plantlist" element={<PlantList plants={plants}/>}/>
           <Route path="comments" element={<CommentSection />}/>
+          <Route path="buyplant" element={<BuyPlant />}/>
         </Routes>
         </BrowserRouter>
     </>
