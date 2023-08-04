@@ -14,11 +14,12 @@ function CommentSection() {
       };
 
   return (
-    <div>
+    <div className='comments'>
         <h2>Reviews and Comments</h2>
         <form onSubmit={handleSubmit}>
         <label htmlFor='email'>Email</label><br />
         <input
+        name='email'
           type='email'
           id='email'
           value={email}

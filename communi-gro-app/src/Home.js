@@ -19,7 +19,7 @@ function Home() {
 
   return (
 
-    <div style={backgroundStyle}>
+    <div className='home-page' style={backgroundStyle}>
       <h1>Welcome to CommuniGro</h1>
       <p>Discover a world of plants you can grow, indoors and outdoors.</p>
       <p>Order seedlings, share your experiences, and connect with fellow gardeners.</p>
