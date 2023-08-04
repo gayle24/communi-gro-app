@@ -20,14 +20,19 @@ function App() {
     });
   }, []); 
 
+  const style = ({ isActive }) => ({
+    color: isActive ? '#fff' : 'lightblue',
+    background: isActive ? '#7600dc' : '#000',
+    })
+
   return (
     <>
       <Header />
       <BrowserRouter>
-        <NavLink to="/" style={{ marginRight: 10 }}>Home</NavLink>
-        <NavLink to="/plantlist" style={{ marginRight: 10 }}>Discover Plants</NavLink>
-        <NavLink to="/buyplant" style={{ marginRight: 10 }}>Order Seedlings</NavLink>
-        <NavLink to="/comments" style={{ marginRight: 10 }}>Talk to Us</NavLink>
+        <NavLink to="/" style={style}>Home</NavLink>
+        <NavLink to="/plantlist" style={style}>Discover PLants</NavLink>
+        <NavLink to="/buyplant" style={style}>Order Seedlings</NavLink>
+        <NavLink to="/comments" style={style}>Leave your Comment</NavLink>
         <Routes>
           <Route index element = {<Home />}/>
           <Route path="plantlist" element={<PlantList plants={plants}/>}/>

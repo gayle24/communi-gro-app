@@ -13,10 +13,21 @@ function CommentSection() {
         setComment('');
       };
 
+      const background = {
+        backgroundImage: `url('https://i.pinimg.com/736x/78/d0/ad/78d0ad6364813d7e1cff86fe4473e419--a-love-tea-party.jpg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '100vh', 
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }
+
   return (
-    <div className='comments'>
-        <h2>Reviews and Comments</h2>
+    <div className='comments' style={background}>
         <form onSubmit={handleSubmit}>
+        <h2>Reviews and Comments</h2>
         <label htmlFor='email'>Email</label><br />
         <input
         name='email'
@@ -27,7 +38,7 @@ function CommentSection() {
           required
         /><br />
         
-        <label htmlFor='comment'>Comment</label><br />
+        <label htmlFor='comment'>Comment/Review</label><br />
         <textarea
           id='comment'
           value={comment}
@@ -37,8 +48,9 @@ function CommentSection() {
         
         <button type='submit'>Submit</button>
       </form>
-      <h3>Submitted Comments</h3>
+      
       <ul>
+      <h3>Submitted Comments</h3>
         {submittedComments.map((c, index) => (
           <li key={index}>
             <strong>{c.email}</strong>: {c.comment}
