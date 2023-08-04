@@ -32,7 +32,7 @@ function BuyPlant({ plants }) {
   return (
     <div className='buyplant' style={background}>
       <form>
-        <h2>Order For your Favourite PLant</h2>
+        <h2>Order For your Favourite Plant</h2>
         <label htmlFor='plant_names'>Select a Plant</label>
         <br/>
         <select name='plant_names' id='plant_names'>
