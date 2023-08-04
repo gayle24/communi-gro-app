@@ -15,6 +15,7 @@ function CommentSection() {
 
   return (
     <div>
+        <h2>Reviews and Comments</h2>
         <form onSubmit={handleSubmit}>
         <label htmlFor='email'>Email</label><br />
         <input
@@ -35,6 +36,14 @@ function CommentSection() {
         
         <button type='submit'>Submit</button>
       </form>
+      <h3>Submitted Comments</h3>
+      <ul>
+        {submittedComments.map((c, index) => (
+          <li key={index}>
+            <strong>{c.email}</strong>: {c.comment}
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
