@@ -1,4 +1,4 @@
-# communi-gro-app
+# CommuniGro App
 
 Welcome to the CommuniGro App, a website application that aims to encourage plant growing by giving users a platform to discover plants that they can grow both indoors and outdoors.
 
