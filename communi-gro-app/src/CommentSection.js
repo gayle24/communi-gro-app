@@ -2,8 +2,17 @@ import React, {useState} from 'react'
 
 function CommentSection() {
     const [email, setEmail] = useState('');
-  const [comment, setComment] = useState('');
-  const [submittedComments, setSubmittedComments] = useState([]);
+    const [comment, setComment] = useState('');
+    const [submittedComments, setSubmittedComments] = useState([]);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const newComment = { email, comment };
+        setSubmittedComments([...submittedComments, newComment]);
+        setEmail('');
+        setComment('');
+      };
+
   return (
     <div>
         <form onSubmit={handleSubmit}>
