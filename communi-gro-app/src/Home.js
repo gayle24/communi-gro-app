@@ -3,16 +3,18 @@ import React from 'react'
 function Home() {
 
     const backgroundStyle = {
-        backgroundImage: `url('https://f8n-production-collection-assets.imgix.net/0x987e51B6f520a5027290dBdBAA9Ccc1194beBDB4/10/nft.png?q=80&auto=format%2Ccompress&cs=srgb&h=640')`,
+        backgroundImage: `url('https://cdn.openart.ai/stable_diffusion/adb8a84e04a3a15f601538c2becc71cd136eefbc_2000x2000.webp')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        height: '100vh', // Adjust the height as needed
+        height: '100vh', 
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         color: 'white',
         textAlign: 'center',
+        fontSize: '25px',
+        fontFamily: ''
       };
 
   return (
