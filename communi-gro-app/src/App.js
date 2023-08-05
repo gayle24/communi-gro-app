@@ -40,7 +40,7 @@ function App() {
           <Route path="buyplant" element={<BuyPlant plants={plants} />}/>
         </Routes>
         </BrowserRouter>
-    </>
+      </>
   )
 }
 
