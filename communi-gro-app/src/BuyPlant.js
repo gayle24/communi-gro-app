@@ -12,7 +12,7 @@ function BuyPlant({ plants }) {
     function handleSubmit(){
         if(input.length > 1){
            window.alert("Order made!");
-           navigate("/plantlist")
+           navigate("/communi-gro-app")
            
         } else {
             window.alert("Kindly Specify your Address")
