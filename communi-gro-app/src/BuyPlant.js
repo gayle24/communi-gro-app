@@ -12,6 +12,7 @@ function BuyPlant({ plants }) {
     function handleSubmit(){
         if(input.length > 1){
            window.alert("Order made!");
+           window.history.back();
            
         } else {
             window.alert("Kindly Specify your Address")
